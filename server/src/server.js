@@ -1,12 +1,12 @@
 //This file start the express server
 
-const app = require('./app');
-
-const connectDB = require('./config/db');
-
 const dotenv = require('dotenv');   //imports the dotenv package from node_modules
 
 dotenv.config();   //Reads the .env file and loads all its variables into process.env
+
+const app = require('./app');
+
+const connectDB = require('./config/db');
 
 connectDB();   //it calls the function  inside db.js
 

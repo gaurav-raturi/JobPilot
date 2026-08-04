@@ -7,6 +7,8 @@ import DeleteModal from '../components/DeleteModal';
 import DropDownMenu from '../components/DropDownMenu';
 import Logo from '../components/Logo';
 import { motion, AnimatePresence, easeInOut } from 'framer-motion';
+import AIChatButtons from '../components/AIChatButtons';
+import AIChatWindow from '../components/AIChatWindow';
 
 const Dashboard = () => {
 
@@ -24,6 +26,7 @@ const Dashboard = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedJobDetails, setSelectedJobDetails] = useState(null);
   const [sortBy, setSortBy] = useState('newest');
+  const [isChatOpen, setIsChatOpen] = useState(false);
 
   //Read the saved user from localStorage
   const user = JSON.parse(localStorage.getItem('user'));
@@ -796,6 +799,15 @@ const toggleFavourite = async (jobId, currentValue) => {
         setIsOpen(false);
       }}
       />
+
+      <AIChatButtons 
+      onclick={() => setIsChatOpen(true)}
+      />
+
+      {isChatOpen && (
+        <AIChatWindow
+        onclose={() => setIsChatOpen(false)} />
+      )}
       </div>
     ); 
   };   

@@ -10,6 +10,8 @@ const authRoutes = require('./routes/authRoutes');
 
 const jobRoutes = require('./routes/jobRoutes');
 
+const aiRoutes = require('./routes/aiRoutes');
+
 const app = express();  //main express application instance
 
 app.use(cors());
@@ -23,6 +25,8 @@ app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 app.use('/api/auth', authRoutes);
 
 app.use('/api/jobs', jobRoutes);
+
+app.use('/api/ai', aiRoutes);
 
 module.exports = app;
 
