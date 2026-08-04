@@ -75,6 +75,16 @@ JWT_SECRET=your_secret_key
 
 ---
 
+## 🤖 AI Career Assistant
+
+- Integrated Google Gemini API
+- Real-time AI responses
+- React + Express architecture
+- Prompt engineering for career guidance
+- Auto-scroll and auto-focus
+- Message timestamps
+- Error handling
+
 ##  Author
 
 **Gaurav Raturi**
